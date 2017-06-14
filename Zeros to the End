@@ -1,0 +1,18 @@
+do{
+    var Input = prompt("Write '4' or more digits:",  "i.e.,01234");
+    var selection = parseInt(Input, 10);
+}		while(isNaN(selection) || Input.length < 4);
+
+
+function ZerosToEnd(arr) {
+		 var count = 0;  
+	   for (var i = 0; i < arr.length; i++) {
+	    	if (arr[i] !== 0) arr[count++] = arr[i];}
+	    		
+  		while (count < arr.length) arr[count++] = 0;
+    		return arr;
+    								
+    								
+}
+
+console.log(ZerosToEnd(selection));
