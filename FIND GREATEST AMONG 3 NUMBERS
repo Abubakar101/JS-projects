@@ -1,0 +1,22 @@
+do {
+
+var	userInput = prompt("To Find the largest 'Number', Write 3 Numbers Only", "i.e.,123"), 
+		selection = parseInt(userInput, 10); 
+
+	
+}		while (isNaN(selection) || userInput.length <3);
+
+let max =null;
+for (var i=0; i < userInput.length; i++) {
+	
+	if (max === null) max=userInput[i];
+	
+	if (parseInt(userInput[i], 10) > parseInt(max, 10)) max = userInput[i]; 
+		
+	
+	
+} console.log(max);
+
+
+
+ 
