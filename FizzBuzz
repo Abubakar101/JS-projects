@@ -1,0 +1,16 @@
+var max = 20;
+var i = 0;
+   var word;
+   while (i++ < max) {
+       if (i % 3 == 0) {
+           word = 'Fizz';
+           if (i % 5 == 0) {
+               word += 'Buzz';
+           }
+       } else if (i % 5 == 0) {
+           word = 'Buzz';
+       } else {
+           word = i;
+       }
+       console.log(word);
+   }
