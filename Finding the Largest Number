@@ -1,0 +1,12 @@
+var array = [10,12,15,3,5,22,2];
+var max = 0;
+
+for (i=0; i < array.length; i++) {
+	if (array[i] > max) {
+		max = array[i];
+		
+		
+	}  
+	
+}
+console.log(max);
