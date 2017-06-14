@@ -1,0 +1,48 @@
+var Gamerules = {
+paper: 'rock',
+scissor: 'paper',
+rock: 'scissors'
+};
+
+
+
+var game = Object.keys(Gamerules);
+
+var random = function(game){
+  
+  
+  return game[Math.floor(Math.random() * game.length)];
+  
+};
+
+var pcChoice = random(game);
+console.log('Computer Choice: ' + Capitalize(pcChoice));
+
+
+ var answer;
+
+while (!answer || game.indexOf(answer) < 0) {
+
+answer = prompt('Rock, Paper or Scissors? Choose one!!').toLowerCase();
+
+  
+}
+console.log('Your Choice: ' + Capitalize(answer));
+
+
+
+if(pcChoice == answer){
+  console.log('It is a DRAW!');
+}else if(Gamerules[pcChoice] == answer) {
+  console.log('Computer Won!');
+} else {
+  console.log('You Won!');
+}
+
+
+
+
+function Capitalize(word){
+  return word[0].toUpperCase() + word.substring(1);
+  
+}
