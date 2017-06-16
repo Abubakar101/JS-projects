@@ -1,0 +1,14 @@
+  
+var a = prompt("Write something");
+var b = prompt("Write something, again!!");
+
+function NameChange (a,b) {
+	let c = a;
+	let d = b;
+	
+	a = d;
+	b = c;
+	
+	console.log(a + b);
+	
+}NameChange(a,b);
