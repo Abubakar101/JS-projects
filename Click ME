@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Click ME</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <style>
+        .button {
+            text-align: center;
+            position: relative;
+            top: 20px;
+            left: 25%;
+            transition: 0.5s ease all;
+            width: 15%;
+        }
+
+        div {
+            display: inline;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div>
+
+        <button type="button" class="button">Click Me</button>
+        <button type="button" class="button">Click Me</button>
+        <button type="button" class="button">Click Me</button>
+
+    </div>
+
+    <script>
+        const movingButtons = document.querySelectorAll('.button');
+
+        movingButtons.forEach(button => button.addEventListener('mouseenter', moveMouse));
+
+        function moveMouse() {
+
+            const Left = Math.random() * (window.innerWidth - this.clientWidth);
+            const Top = Math.random() * (window.innerHeight - this.clientHeight);
+
+            this.style.top = Top + 'px';
+            this.style.left = Left + 'px';
+
+        }
+    </script>
+
+</body>
+
+</html>
