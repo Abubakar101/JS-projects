@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Timer</title>
+
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+
+
+	<style>
+		body,
+		.jumbotron {
+			padding: 100px;
+		}
+
+		.timer {
+			font-size: 170px;
+		}
+
+		.btn {
+			height: 85px;
+			width: 150px;
+			margin: 40px;
+			margin-bottom: 5px;
+		}
+
+		button span {
+			font-size: 40px;
+		}
+
+		.reset {
+			width: 385px;
+			margin: auto;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="jumbotron  text-center">
+		<div class="timer">
+			<span class="minutes">'00'</span><span>:</span>
+			<span class="seconds">'00'</span>
+
+		</div>
+
+		<button class="btn btn-success btn-lg" data-time="start">
+	<span>Start</span>
+	</button>
+
+		<button class="btn btn-danger btn-lg" data-time="stop">
+	<span>Stop</span>
+	</button>
+
+		<button class="reset btn-info btn-block" data-time="reset">
+	<span>Reset</span>
+	</button>
+
+
+
+
+
+	</div>
+
+	<script>
+		//grab everything from html
+		const startButton = document.querySelector('[data-time="start"]');
+		const stopButton = document.querySelector('[data-time="stop"]');
+		const resetButton = document.querySelector('[data-time="reset"]');
+		const minutes = document.querySelector('.minutes');
+		const seconds = document.querySelector('.seconds');
+		let time = 00;
+		let running = false;
+		let interval;
+
+
+
+		// Create Functions
+		//Start Button
+		function startTimer() {
+			if (running) return;
+			running = true;
+			interval = setInterval(increment, 1000);
+
+		}
+		//Stop Button
+		function stopTimer() {
+			if (!running) return;
+			running = false;
+			clearInterval(interval);
+		}
+		//Reset Button
+		function resetTimer() {
+			stopTimer();
+			time = 0;
+			minutes.innerText = '00';
+			seconds.innerText = '00';
+		}
+
+		
+		function increment() {
+			time++;
+			const numOfMinutes = Math.floor(time / 60);
+			const numOfSeconds = time % 60;
+			minutes.innerText = digi(numOfMinutes);
+			seconds.innerText = digi(numOfSeconds);
+		}
+
+		function digi(number) {
+			return (number < 10) ? '0' + number : number;
+		}
+
+		//select events for OutPut
+		startButton.addEventListener('click', startTimer);
+		stopButton.addEventListener('click', stopTimer);
+		resetButton.addEventListener('click', resetTimer);
+	</script>
+
+</body>
+
+</html>
