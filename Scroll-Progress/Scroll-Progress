@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  abubakar</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="scroll-line"></div>
+<div class="container">
+</div>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
