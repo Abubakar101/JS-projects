@@ -1,0 +1,1 @@
+Scroll Bar Progress shows a "bar" on top of the page as scrolling up/down. 
