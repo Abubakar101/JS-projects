@@ -9,61 +9,37 @@
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
 
     <style>
-        body,
-        .jumbotron {
-            padding: 20px;
-        }
+        body, .jumbotron {padding:20px; margin:auto;}
 
-            html      {
-      overflow-y: scroll;
-      overflow-x: scroll;
+.question {
+  color:#63602f;
+  border-top: 1px dashed #d3d3d3;
+  padding: 20px;
+  cursor: pointer;
+}
+
+ .answer p {
+  padding:10px;
+}
+.answer{
+ max-height: 0;
+ overflow: hidden;
+ transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+.bd {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+} 
+
+body      {
+      background: #9da4ad;
     }
 
-        .question {
-            color: #63602f;
-            border-top: 1px solid #d3d3d3;
-            padding: 20px;
-            cursor: pointer;
-        }
-
-        .question .glyphicon {
-            position: absolute;
-            right: 20px;
-            top: 0;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            color: #C00C00;
-            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-        }
-
-        .answer p {
-            padding: 10px;
-        }
-
-        .answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-        }
-
-        .bd {
-            background: #ffffff;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-        body {
-            background: #9da4ad;
-        }
-
-        .bd li.open .question .glyphicon {
-            transform: rotate(180deg);
-        }
-
-        .bd li.open .answer {
-            max-height: 150px;
-        }
+   .bd li.open .answer  {
+      max-height: 125px;
+    }
     </style>
 
 
