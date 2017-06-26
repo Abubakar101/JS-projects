@@ -1,1 +1,1 @@
-Scroll Bar Progress shows a "bar" on top of the page as scrolling up/down. 
+Scroll Bar Progress shows a "animated-bar" - going right as scroll down or going left as scroll up. 
