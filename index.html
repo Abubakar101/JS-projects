@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>A Pen by abubakar</title>
+
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+    <style>
+        body,
+        .jumbotron {
+            padding: 20px;
+        }
+
+            html      {
+      overflow-y: scroll;
+      overflow-x: scroll;
+    }
+
+        .question {
+            color: #63602f;
+            border-top: 1px solid #d3d3d3;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .question .glyphicon {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: #C00C00;
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+        }
+
+        .answer p {
+            padding: 10px;
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+        }
+
+        .bd {
+            background: #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        body {
+            background: #9da4ad;
+        }
+
+        .bd li.open .question .glyphicon {
+            transform: rotate(180deg);
+        }
+
+        .bd li.open .answer {
+            max-height: 150px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="bd">
+            <!--<div class="jumbotron">
+      -->
+            <ul>
+                <li class="open">
+                    <div class="question">
+                        <h2>What is your Name?</h2><span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolorum dolore totam quo
+                            commodi sapiente in, libero, consectetur similique, labore non provident dolorem quibusdam quos,
+                            corporis facere est quod deserunt.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="question">
+                        <h2>How are you today?</h2><span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolorum dolore totam quo
+                            commodi sapiente in, libero, consectetur similique, labore non provident dolorem quibusdam quos,
+                            corporis facere est quod deserunt.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="question">
+                        <h2>What about him?</h2><span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolorum dolore totam quo
+                            commodi sapiente in, libero, consectetur similique, labore non provident dolorem quibusdam quos,
+                            corporis facere est quod deserunt.</p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const bd = document.querySelector('.bd');
+        const items = bd.querySelectorAll('li');
+        const questions = bd.querySelectorAll('.question');
+
+        function togglebd() {
+            const thisItem = this.parentNode;
+
+            items.forEach(item => {
+                if (thisItem == item) {
+                    thisItem.classList.toggle('open');
+                    return;
+                }
+                item.classList.remove('open');
+            });
+        }
+
+
+        questions.forEach(question => question.addEventListener('click', togglebd)
+        );
+    </script>
+
+</body>
+
+</html>
