@@ -1,0 +1,139 @@
+.background-image {
+  top: 0;
+  left: 0;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-image: url(https://images.unsplash.com/photo-1484542603127-984f4f7d14cb?dpr=1&auto=format&fit=crop&w=1500&h=902&q=80&cs=tinysrgb&crop=&bg=);
+  background-repeat: no-repeat;
+  z-index: -10;
+  transition: 0.5s ease;
+}
+
+.box {
+  padding: 4px;
+  height: 95px;
+  width: 52%;
+  background: linear-gradient(#444, #888);
+  margin: 4% auto;
+  margin-bottom: 10px;
+  border-top-right-radius: 29px;
+  border-top-left-radius: 17px;
+  border: 3px solid #778899;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.newBox {
+  transition: 0.5s ease;
+  padding: 8px;
+  height: 121px;
+  width: 68%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 5px solid #778899;
+}
+
+.text {
+  transition: 0.5s ease;
+  padding: 15px;
+  font-size: 52px;
+  width: 88.5%;
+  display: inline-block;
+  height: 94%;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: Calibri bold;
+  text-align: center;
+  border-top-left-radius: 10px;
+  background-color: #f1f3f4;
+}
+
+.newText {
+  transition: 0.5s ease;
+  width: 89.5%;
+  font-size: 75px;
+}
+
+.btn {
+  transition: 0.5s ease;
+  position: absolute;
+  width: 99px;
+  height: 48%;
+  right: -23px;
+  top: 26px;
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  cursor: pointer;
+  border: 1px solid #333;
+  border-bottom-right-radius: 29px;
+  border-top-left-radius: 10px;
+  padding: 4px 8px 0px 20px;
+  font: 12pt Calibri bold;
+  font-variant: small-caps;
+  color: #fff;
+  outline: 0;
+  letter-spacing: 10px;
+  text-shadow: 0 1px 4px #111;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .2),
+    inset 0 -1px 1px rgba(255, 255, 255, .1);
+  background: linear-gradient(#888, #777);
+}
+
+.newButton {
+  transition: 0.5s ease;
+  width: 125px;
+  height: 46%;
+  right: -24px;
+  top: 37.5px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 4px #fff;
+}
+
+.btn:active {
+  top: 29px;
+}
+
+.btn.newButton:active {
+  top: 35px;
+}
+
+.bookmark {
+  padding: 24px;
+  line-height: 47px;
+  width: 60%;
+  margin: 0 auto;
+  background: #f1f3f4;
+  color: red;
+  font-size: x-large;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  display:block;
+  text-decoration: none;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2;
+  opacity: .5;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+
+.bookmark:hover {
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+}
+
+
